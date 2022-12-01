@@ -4,6 +4,9 @@ import json
 import os
 from threading import Thread
 
+
+BASE_DIR    = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
 def uniquify(path):
     filename, extension = os.path.splitext(path)
     counter = 1
@@ -60,7 +63,7 @@ def getImages(marca, modelo, versao, paginas):
                         URLIMAGE = 'https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/'+img_path
                         
                         # dir = "images/"+curr.split(' ')[0].upper()+"/"+curr.split(' ')[1].upper()+'/'+curr+'/';
-                        dir = "data/"+currname+'/'+currname+"_"+curryear+'/';
+                        dir = os.path.join(BASE_DIR, "dataset_bruto/"+currname+'/'+currname+"_"+curryear+'/')
                         # dir = "images/"
                         if not os.path.exists(dir):
                             os.makedirs(dir)
