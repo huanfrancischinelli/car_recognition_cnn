@@ -1,1 +1,5 @@
 UTILIZAR PYTHON 3.10.8
+
+Recomenda-se a criação de um VENV para a instalação das dependencias necessárias, listadas no arquivo requirements.txt.
+
+Comando para instalação das dependencias: python -m pip install -r requirements.txt
